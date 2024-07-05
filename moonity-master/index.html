@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Moonity</title>
+    <link rel="icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/gradient.js"></script>
+</head>
+<body>
+    <audio id="audio-player" src="assets/audios/audio.mp3"></audio>
+    <div class="container">
+        <div class="open-menu-button"><span></span></div>
+        <div class="menu-container">
+            <div class="menu-wrapper">
+                <img class="moonity" src="https://i.pinimg.com/564x/c1/4c/36/c14c36fd01add8a71c9c3fbce24d1ea1.jpg" alt="">
+                <p>hello, this is the menu to choose songs, will do it later 😭</p>
+            </div>
+        </div>
+        <div class="main-screen">
+            <div class="full-screen-button">
+                <img src="assets/images/full-screen.svg" alt="">
+            </div>
+            <div class="primary" draggable="false">
+                <div class="image-outer">
+                    <p class="message">ohhh i'm blinded by the lights</p>
+                    <img src="https://i.scdn.co/image/ab67616d0000b273a3eff72f62782fb589a492f9" alt="" class="artwork" draggable="false">
+                </div>
+                <div class="timestamp">
+                    <p class="start" id="time-elapsed">0:00</p>
+                    <div class="center">
+                        <img src="assets/images/spotify.svg" alt="" class="icon" draggable="false">
+                        <p class="plays">100,000,000</p>
+                    </div>
+                    <p class="end" id="time-left">-0:00</p>
+                </div>
+                <div class="progress-bar">
+                    <input type="range" min="1" max="1000" value="0" class="slider" id="slider">
+                </div>
+                <div class="now-playing">
+                    <div class="song-name">Blinding Lights<img src="assets/images/explicit.svg" alt="" class="explicit" draggable="false"></div>
+                    <div class="artist">
+                        <p class="name">The Weeknd</p>
+                        <span class="long-hyphen"></span>
+                        <p class="album">Blinding Lights</p>
+                        <span class="hyphen"></span>
+                        <p>Single</p>
+                    </div>
+                </div>
+                <div class="music-controls">
+                    <div class="lyrics" id="button-lyrics"><img src="assets/images/lyrics.svg" alt="" draggable="false"></div>
+                    <div class="previous" id="button-previous"><img src="assets/images/previous.svg" alt="" draggable="false"></div>
+                    <div class="pause" id="button-pause" style="display: none;"><img src="assets/images/pause.svg" alt="" draggable="false"></div>
+                    <div class="play" id="button-play" style="display: flex;"><img src="assets/images/play.svg" alt="" draggable="false"></div>
+                    <div class="next" id="button-next"><img src="assets/images/next.svg" alt="" draggable="false"></div>
+                    <div class="repeat" id="button-repeat"><img src="assets/images/repeat.svg" alt="" draggable="false"></div>
+                </div>
+            </div>
+            <div class="lyrics-container">
+                <div class="loading-text" style="display: none;">
+                    <p>Loading lyrics...</p>
+                </div>
+                <div class="lyrics-wrapper">
+                    <div class="item" id="wait"><span></span><span></span><span></span></div>
+                    <!-- Lyrics will be dynamically added here -->
+                    <div class="item" style="filter: blur(0);">
+                        <span class="line"></span>
+                        <div class="credits"><span>Written by: <span class="written-by">Abel Tesfaye, Ahmad Balshe, Jason Quenneville, Max Martin, Oscar Thomas Holter</span></span></div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+        <div class="background-screen">
+            <canvas class="gradient-canvas" id="gradient-canvas"></canvas>
+        </div>
+    </div>
+    <script>
+        var gradient = new Gradient();
+        gradient.initGradient('#gradient-canvas');
+    </script>
+</body>
+</html>
